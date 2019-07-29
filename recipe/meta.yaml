@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256sum }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and py27]
 
 requirements:
@@ -39,7 +39,9 @@ about:
   home: http://github.com/explosion/cython-blis
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - blis/LICENSE
   summary: 'Fast matrix-multiplication as a self-contained Python library – no system dependencies!'
 
   doc_url: https://github.com/explosion/cython-blis
