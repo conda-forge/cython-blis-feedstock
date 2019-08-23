@@ -1,6 +1,6 @@
 {% set name = "cython-blis" %}
-{% set version = "0.2.4" %}
-{% set sha256sum = "2d4ca1508fd6229c7994fc17ba324083a5b83f66612c8ea62623a41a1768b030" %}
+{% set version = "0.4.0" %}
+{% set sha256sum = "d5dfb6adc2ec93b8f32006f8eb1f85e569ace0ef998b4e7bb6d9676ebe0010ce" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256sum }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and py27]
 
 requirements:
@@ -37,8 +37,8 @@ test:
 
 about:
   home: http://github.com/explosion/cython-blis
-  license: MIT
-  license_family: MIT
+  license: BSD
+  license_family: BSD
   license_file:
     - LICENSE
     - blis/LICENSE
