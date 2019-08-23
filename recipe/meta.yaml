@@ -1,6 +1,6 @@
 {% set name = "cython-blis" %}
-{% set version = "0.4.0.dev0" %}
-{% set sha256sum = "a2210cbe108fbed285b4735ff7dc3cf4c022014bc0fa10e935a18550c4fc7be8" %}
+{% set version = "0.4.0.dev1" %}
+{% set sha256sum = "7e6f0d1b52c623d84e8b47db966426af4f93543d2ce36bb58b404a62c883992a" %}
 
 package:
   name: {{ name|lower }}
