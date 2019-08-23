@@ -37,8 +37,8 @@ test:
 
 about:
   home: http://github.com/explosion/cython-blis
-  license: MIT
-  license_family: MIT
+  license: BSD
+  license_family: BSD
   license_file:
     - LICENSE
     - blis/LICENSE
