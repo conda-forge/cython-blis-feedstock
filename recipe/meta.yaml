@@ -1,6 +1,6 @@
 {% set name = "cython-blis" %}
-{% set version = "0.2.4" %}
-{% set sha256sum = "2d4ca1508fd6229c7994fc17ba324083a5b83f66612c8ea62623a41a1768b030" %}
+{% set version = "0.4.0.dev0" %}
+{% set sha256sum = "a2210cbe108fbed285b4735ff7dc3cf4c022014bc0fa10e935a18550c4fc7be8" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256sum }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and py27]
 
 requirements:
