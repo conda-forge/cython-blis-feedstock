@@ -3,7 +3,7 @@ About cython-blis
 
 Home: http://github.com/explosion/cython-blis
 
-Package license: MIT
+Package license: BSD
 
 Feedstock license: BSD 3-Clause
 
