@@ -1,14 +1,12 @@
-{% set name = "cython-blis" %}
 {% set version = "0.4.1" %}
-{% set sha256sum = "d69257d317e86f34a7f230a2fd1f021fd2a1b944137f40d8cdbb23bd334cd0c4" %}
 
 package:
-  name: {{ name|lower }}
+  name: cython-blis
   version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/b/blis/blis-{{ version }}.tar.gz
-  sha256: {{ sha256sum }}
+  sha256: d69257d317e86f34a7f230a2fd1f021fd2a1b944137f40d8cdbb23bd334cd0c4
 
 build:
   number: 0
@@ -23,11 +21,11 @@ requirements:
     - pip
     - python
     - setuptools
-    - numpy 1.15.*
+    - numpy 1.16.*
     - wheel >=0.32,<0.33
   run:
     - python
-    - numpy >=1.15.0
+    - numpy >=1.16
 
 test:
   imports:
@@ -37,7 +35,7 @@ test:
 
 about:
   home: http://github.com/explosion/cython-blis
-  license: BSD
+  license: BSD-3-Clause
   license_family: BSD
   license_file:
     - LICENSE
