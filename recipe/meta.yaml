@@ -9,7 +9,7 @@ source:
   sha256: d69257d317e86f34a7f230a2fd1f021fd2a1b944137f40d8cdbb23bd334cd0c4
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and py27]
 
 requirements:
@@ -21,11 +21,11 @@ requirements:
     - pip
     - python
     - setuptools
-    - numpy 1.16.*
+    - numpy 
     - wheel >=0.32,<0.33
   run:
     - python
-    - numpy >=1.16
+    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
