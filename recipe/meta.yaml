@@ -1,4 +1,4 @@
-{% set version = "0.7.0" %}
+{% set version = "0.7.1.dev0" %}
 
 package:
   name: cython-blis
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/blis/blis-{{ version }}.tar.gz
-  sha256: dc4ee93004c7e65631c8077638e0176612941e2c683fbc4b05a4397132424443
+  sha256: 81a62324986cea4305276b415d856d393f2bf52880324b87d5c903a9a9e8afd7
 
 build:
   number: 0
