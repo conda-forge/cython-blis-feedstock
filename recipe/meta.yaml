@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/blis/blis-{{ version }}.tar.gz
-  sha256: 81a62324986cea4305276b415d856d393f2bf52880324b87d5c903a9a9e8afd7
+  sha256: 2b919b3a1f46138ec43e8008b15511d9772d89af4320485b7e37288eaff147ac
 
 build:
   number: 0
