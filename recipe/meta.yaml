@@ -9,8 +9,7 @@ source:
   sha256: 014771a0f753a64ef5610c5b3d4a090b263073bdd59b8ad0d872ce1e06e7315a
 
 build:
-  number: 1
-  skip: true  # [win and py27]
+  number: 2
 
 requirements:
   build:
@@ -20,12 +19,12 @@ requirements:
     - python
     - pip
     - cython
+    - numpy >=1.16
     - setuptools
-    - numpy 1.16.*
     - wheel
   run:
     - python
-    - numpy >=1.16
+    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
@@ -34,16 +33,14 @@ test:
     - blis.cy
 
 about:
-  home: http://github.com/explosion/cython-blis
+  home: https://github.com/explosion/cython-blis
   license: BSD-3-Clause
   license_family: BSD
   license_file:
     - LICENSE
     - blis/LICENSE
   summary: 'Fast matrix-multiplication as a self-contained Python library – no system dependencies!'
-
-  doc_url: https://github.com/explosion/cython-blis
-  dev_url: https://github.com/explosion/cython-blis
+  doc_url: https://pypi.org/project/blis/
 
 extra:
   recipe-maintainers:
