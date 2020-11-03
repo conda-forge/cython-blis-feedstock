@@ -1,4 +1,4 @@
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 
 package:
   name: cython-blis
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/blis/blis-{{ version }}.tar.gz
-  sha256: 014771a0f753a64ef5610c5b3d4a090b263073bdd59b8ad0d872ce1e06e7315a
+  sha256: c14fb9ec3f5ed7c4940c132c7691469ac5d3e302891d95e935623bf1d4e17fbb
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and py27]
 
 requirements:
@@ -40,7 +40,7 @@ about:
   license_file:
     - LICENSE
     - blis/LICENSE
-  summary: 'Fast matrix-multiplication as a self-contained Python library – no system dependencies!'
+  summary: Fast matrix-multiplication as a self-contained Python library – no system dependencies!
 
   doc_url: https://github.com/explosion/cython-blis
   dev_url: https://github.com/explosion/cython-blis
