@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/b/blis/blis-{{ version }}.tar.gz
-  sha256: 19557b14763253ca3d4f6cfc9c9fe2eed3d65db14fa273ced8b0c17ce2bfda4a
+  url: https://github.com/adrianeboyd/cython-blis/archive/e09e6f2e43ab8016fc14b9baa2257796634cba77.zip
+  sha256: 1d95f623690c946a0460785a1ab9133f7db86f12c4aca99ac244b4d7c0b0707f
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and py27]
 
 requirements:
