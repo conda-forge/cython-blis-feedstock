@@ -28,10 +28,15 @@ requirements:
     - {{ pin_compatible('numpy') }}
 
 test:
+  requires:
+    - pytest
+    - hypothesis
   imports:
     - blis
     - blis.py
     - blis.cy
+  commands:
+    - python -m pytest --tb=native --pyargs blis
 
 about:
   home: http://github.com/explosion/cython-blis
