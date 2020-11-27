@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/adrianeboyd/cython-blis/archive/e09e6f2e43ab8016fc14b9baa2257796634cba77.zip
-  sha256: 1d95f623690c946a0460785a1ab9133f7db86f12c4aca99ac244b4d7c0b0707f
+  url: https://github.com/adrianeboyd/cython-blis/archive/504196e11925982db4fc516159f447b86c740643.zip
+  sha256: 73e7d725059d9a01c56c411d8a0c1eed1c98613795745b0808c059b5ed34065c
 
 build:
   number: 1
