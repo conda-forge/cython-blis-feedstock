@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-ln -s `which $CC` $BUILD_PREFIX/bin/gcc
-export CC=$BUILD_PREFIX/bin/gcc
-export BLIS_COMPILER="$CC"
+#ln -s `which $CC` $BUILD_PREFIX/bin/gcc
+#export CC=$BUILD_PREFIX/bin/gcc
+#export BLIS_COMPILER="$CC"
 #export BLIS_ARCH="x86_64_no_skx"
 
 if [[ "$(uname)" == "Linux" ]]; then
