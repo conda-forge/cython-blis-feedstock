@@ -29,7 +29,6 @@ requirements:
     - wheel
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   requires:
