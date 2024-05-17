@@ -1,7 +1,9 @@
 c_compiler:
 - vs2019
+c_stdlib:
+- vs
 channel_sources:
-- conda-forge
+- conda-forge/label/numpy_rc,conda-forge
 channel_targets:
 - conda-forge main
 numpy:
@@ -17,4 +19,3 @@ target_platform:
 zip_keys:
 - - python
   - numpy
-  - channel_sources

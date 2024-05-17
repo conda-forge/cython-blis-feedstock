@@ -9,7 +9,7 @@ source:
   sha256: 343e8b125784d70ff6e1f17a95ea71538705bf0bd3cc236a176d153590842647
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -18,6 +18,7 @@ requirements:
     - cython <3.0                            # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - clangdev  # [win]
   host:
     - python
@@ -28,7 +29,6 @@ requirements:
     - wheel
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   requires:
