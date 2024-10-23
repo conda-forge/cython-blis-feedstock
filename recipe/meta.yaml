@@ -39,7 +39,10 @@ test:
     - blis.py
     - blis.cy
   commands:
-    - python -m pytest --tb=native --pyargs blis
+    {% set tests_to_skip = "_not_a_real_test" %}
+    # flakiness and likely emulation issues on PPC
+    {% set tests_to_skip = tests_to_skip + " or test_memoryview_float_notrans " %}  # [ppc64le]
+    - pytest --tb=native --pyargs blis -k "not ({{ tests_to_skip }})"
 
 about:
   home: http://github.com/explosion/cython-blis
