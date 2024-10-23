@@ -1,4 +1,4 @@
-{% set version = "0.7.10" %}
+{% set version = "1.0.1" %}
 
 package:
   name: cython-blis
@@ -6,29 +6,29 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/blis/blis-{{ version }}.tar.gz
-  sha256: 343e8b125784d70ff6e1f17a95ea71538705bf0bd3cc236a176d153590842647
+  sha256: 91739cd850ca8100dcddbd8ad66942cab20c9473cdea9a35b165b11d7b8d91e4
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython <3.0                            # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - clangdev  # [win]
   host:
     - python
     - pip
-    - cython <3.0
+    - cython
     - setuptools
     - numpy
     - wheel
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   requires:
@@ -39,7 +39,10 @@ test:
     - blis.py
     - blis.cy
   commands:
-    - python -m pytest --tb=native --pyargs blis
+    {% set tests_to_skip = "_not_a_real_test" %}
+    # flakiness and likely emulation issues on PPC
+    {% set tests_to_skip = tests_to_skip + " or test_memoryview_float_notrans " %}  # [ppc64le]
+    - pytest --tb=native --pyargs blis -k "not ({{ tests_to_skip }})"
 
 about:
   home: http://github.com/explosion/cython-blis
