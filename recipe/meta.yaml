@@ -1,12 +1,13 @@
-{% set version = "1.0.1" %}
+{% set tests_to_skip = "_not_a_real_test" %}
+{% set version = "1.0.2" %}
 
 package:
   name: cython-blis
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/b/blis/blis-{{ version }}.tar.gz
-  sha256: 91739cd850ca8100dcddbd8ad66942cab20c9473cdea9a35b165b11d7b8d91e4
+  url: https://pypi.org/packages/source/b/blis/blis-{{ version }}.tar.gz
+  sha256: 68df878871a9db34efd58f648e12e06806e381991bd9e70df198c33d7b259383
 
 build:
   number: 0
