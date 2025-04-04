@@ -12,6 +12,8 @@ build:
   number: 0
   # despite the migrator passing through already, this is now enforced by upstream metadata
   skip: true  # [py==313]
+  # if you care about ppc, please debug the failures
+  skip: true  # [ppc64le]
 
 requirements:
   build:
