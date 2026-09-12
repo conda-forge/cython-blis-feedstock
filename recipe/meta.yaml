@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/b/blis/blis-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/b/blis/blis-{{ version }}.tar.gz
   sha256: 034d4560ff3cc43e8aa37e188451b0440e3261d989bb8a42ceee865607715ecd
 
 build:
-  number: 0
+  number: 1
   # if you care about ppc, please debug the failures
   skip: true  # [ppc64le]
 
