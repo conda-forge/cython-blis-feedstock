@@ -1,3 +1,6 @@
-# cannot use clang 19+ due to https://github.com/llvm/llvm-project/pull/92883; see #67
-c_compiler_version:  # [osx and x86_64]
+c_compiler_version:  # [x86_64 and (osx or linux)]
+  # cannot use clang 19+ due to https://github.com/llvm/llvm-project/pull/92883; see #67
   - 18               # [osx and x86_64]
+  # gcc 15 fails on the haswell gemmsup kernels with "'asm' operand has
+  # impossible constraints or there are not enough registers"; gcc 14 is fine
+  - 14               # [linux and x86_64]

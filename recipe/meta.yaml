@@ -1,12 +1,16 @@
-{% set version = "1.3.3" %}
+{% set version = "1.3.4" %}
 
 package:
   name: cython-blis
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/b/blis/blis-{{ version }}.tar.gz
-  sha256: 034d4560ff3cc43e8aa37e188451b0440e3261d989bb8a42ceee865607715ecd
+  - url: https://files.pythonhosted.org/packages/source/b/blis/blis-{{ version }}.tar.gz
+    sha256: c125acd77ccf0184f476b6a599f9819727e19ed311904ed3281118a3d06082d9
+  # The tests import blis_tests_common, which the 1.3.4 sdist leaves out.
+  - url: https://raw.githubusercontent.com/explosion/cython-blis/release-v{{ version }}/tests/blis_tests_common.py
+    sha256: 0ad2abfbca0cf8bfdb1025dbe6a335790c46440e5d4557fe02a18fba4cd63013
+    folder: tests
 
 build:
   number: 0
@@ -34,6 +38,8 @@ requirements:
     - python
 
 test:
+  source_files:
+    - tests
   requires:
     - pytest
     - hypothesis
@@ -42,7 +48,9 @@ test:
     - blis.py
     - blis.cy
   commands:
-    - pytest --tb=native --pyargs blis
+    # 1.3.4 no longer ships the tests inside the blis package, so
+    # --pyargs blis collects nothing.
+    - pytest --tb=native tests
 
 about:
   home: http://github.com/explosion/cython-blis
